@@ -155,7 +155,7 @@ public class Config {
         if (lastDevice == null) return false;
         if (lastRomID == null) return false;
         if (curRomID == null) return false;
-        return curVersion == lastVersion && curDevice.equals(lastDevice) && curRomID.equals(lastRomID);
+        return curVersion >= lastVersion && curDevice.equals(lastDevice) && curRomID.equals(lastRomID);
     }
 
     public boolean hasStoredUpdate() {
