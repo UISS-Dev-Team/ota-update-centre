@@ -172,9 +172,6 @@ public class Utils {
 
     public static boolean isUpdate(RomInfo info) {
         if (info == null) return false;
-        if (info.version != null) {
-            if (getOtaVersion() == null || !info.version.equalsIgnoreCase(getOtaVersion())) return true;
-        }
         if (info.date != null) {
             if (getOtaDate() == null || info.date.after(getOtaDate())) return true;
         }
